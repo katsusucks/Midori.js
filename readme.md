@@ -1,5 +1,5 @@
 
-![](i.png)
+
 <h1 align="center">midori.js</h1>
 
 
@@ -14,6 +14,8 @@
 > Install
 > <br>
 > npm i midori.js
+
+<center> <img src = "https://images-ext-1.discordapp.net/external/eCKDusivhESv7loW1dVtR5wtb2pXqS8n2Vm_7b7JkSM/%3Fdownloads%3Dtrue/https/nodei.co/npm/midori.js.png?width=199&height=42"> </center>
 
 
 * Setup
@@ -42,6 +44,8 @@ bot.onMessage();
 [Discord](https://discord.gg/KTFnKuPSqW)
 <br>
 [Github]()
+<br>
+[NPM](https://www.npmjs.com/package/midori.js)
 
 
 

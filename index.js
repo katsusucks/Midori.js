@@ -1,4 +1,4 @@
-const {Plugins } = require("./src/index.js")
+const { Plugins } = require("./src/index.js")
   
 module.exports = {
   Plugins

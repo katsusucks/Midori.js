@@ -6,6 +6,4 @@ module.exports = {
 
 //Load
 
-console.log('\033[32m Loaded on midori.js');
-
-
+console.log('\033[32mmidori.js is successfully packed!');

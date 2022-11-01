@@ -7,9 +7,11 @@
 **The most powerful string package to create a discord bot with custom features having aoi.js features!**
 
 
-* New Features
-* [Check our docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
-* [Check our discord server](https://discord.gg/xPURT2B3sA)
+
+[Check our docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
+<br>
+[Check our discord server](https://discord.gg/xPURT2B3sA)
+* <strong>New Features</strong>
 * $i (Function) (Will be available in v6 aoi.js)
 * $meme
 * $varExists (Function)
@@ -19,7 +21,7 @@
 * $wink
 * $pikachu 
 * Panda [Panda facts]
-* ~~ [Bird facts]
+* $fact [Bird facts]
 * $quote [typea] [typeb]
 * $hug [typea] [typeb]
 ---
@@ -68,6 +70,11 @@ bot.onMessage(); //Listens to messages
 [Docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
 <br>
 
+* Developers
+
+<strong> ZeRealOne </strong>
+<br>
+<strong> ItsHyper </strong>
 
 
 

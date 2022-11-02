@@ -5,5 +5,4 @@ module.exports = {
 };
 
 //Load
-
 console.log('\033[32mmidori.js is successfully packed!');

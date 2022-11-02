@@ -363,5 +363,5 @@ class Plugins {
 
     
 module.exports = {
-  Plugins
+  Plugins 
 }

@@ -1,4 +1,4 @@
-class Plugins {
+  class Plugins {
   constructor(args) {
     this.args = args;
     if (!args.bot) {
@@ -140,14 +140,7 @@ class Plugins {
 
 
 
-
-
-
-
-  
-
-
-    client.functionManager.createCustomFunction({
+client.functionManager.createCustomFunction({
         name: "$cat",
         type: "djs",
         code: async d => {
@@ -290,13 +283,7 @@ class Plugins {
     });
 
     
-
-
-
-
-
-
-    client.functionManager.createCustomFunction({
+client.functionManager.createCustomFunction({
         name: "$pat",
         type: "djs",
         code: async d => {
@@ -323,39 +310,89 @@ class Plugins {
         }
     });
 
-
-
-    client.functionManager.createCustomFunction({
-        name: "$animu",
+        
+client.functionManager.createCustomFunction({
+        name: "$ver",
         type: "djs",
         code: async d => {
           const data = d.util.aoiFunc(d);
           const [type] = data.inside.splits;
           const fetch = require("node-fetch");
-          if(type==="wink"){
-            data.result = await fetch('https://some-random-api.ml/animu/wink')
+          if(type==="selfie"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=selfies')
             .then(res => res.json())
             .then(data => {
-              return data.fact;
+              return data.images[0].url;
             });
-          } else if(type==="palm"){
-            data.result = await fetch('https://some-random-api.ml/animu/face-palm')
+          } else if(type==="uniform"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=uniform')
             .then(res => res.json())
             .then(data => {
-              return data.fact;
+              return data.images[0].url;
             });
           }
+          else if(type==="maid"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=maid')
+            .then(res => res.json())
+            .then(data => {
+              return data.images[0].url;
+            });
+          }
+        else if(type==="hug"){
+            data.result = await fetch('https://api.waifu.pics/sfw/hug')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+          else if(type==="kiss"){
+            data.result = await fetch('https://api.waifu.pics/sfw/kiss')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+         
           return {
             code: d.util.setCode(data)
          
  }
+          
         }
-                                                  
-      });
+    });
+
     
-  }
+client.functionManager.createCustomFunction({
+        name: "$animal",
+        type: "djs",
+        code: async d => {
+          const data = d.util.aoiFunc(d);
+          const [type] = data.inside.splits;
+          const fetch = require("node-fetch");
+          if(type==="duck"){
+            data.result = await fetch('https://random-d.uk/api/random')
+            .then(res => res.json())
+            .then(data => {
+              return data.url;
+            });
+          } else if(type==="duck2"){
+            data.result = await fetch('https://random-d.uk/api/random')
+            .then(res => res.json())
+            .then(data => {
+              return data.url;
+            });
+          }
+          return {
+            code: d.util.setCode(data)
+
+
+          
+}
 }
 
+           });
+  }
+  }
 
 
 
@@ -363,5 +400,5 @@ class Plugins {
 
     
 module.exports = {
-  Plugins 
+  Plugins
 }

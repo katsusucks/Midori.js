@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://media.discordapp.net/attachments/1033604720570404874/1036513359836745798/i.png" />
+  <img src="https://media.discordapp.net/attachments/1033604720570404874/1040123011187081226/500px-493Arceus.png" />
 </p>
 <h1 align="center">midori.js</h1>
 
@@ -12,18 +12,8 @@
 <br>
 [Check our discord server](https://discord.gg/xPURT2B3sA)
 * <strong>New Features</strong>
-* $i (Function) (Will be available in v6 aoi.js)
-* $meme
-* $varExists (Function)
-* $dog [Dog facts]
-* $animu [Pat] [Palm]
-* $cat [Cat facts]
-* $wink
-* $pikachu 
-* Panda [Panda facts]
-* $fact [Bird facts]
-* $quote [typea] [typeb]
-* $hug [typea] [typeb]
+* $ver [selfie] [maid] [uniform] [hug]
+* $animal [duck] [duck2]
 ---
 
 
@@ -72,9 +62,9 @@ bot.onMessage(); //Listens to messages
 
 * Developers
 
-<strong> ZeRealOne </strong>
+<strong>ZeRealOne</strong>
 <br>
-<strong> ItsHyper </strong>
+<strong>ItsHyper</strong>
 
 
 

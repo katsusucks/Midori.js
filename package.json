@@ -1,6 +1,6 @@
 {
   "name": "midori.js",
-  "version": "3.0.0",
+  "version": "3.3.3",
   "description": "midori.js is the most powerful string package to create a discord bot with custom features and having aoi.js features!",
   "main": "index.js",
   "scripts": {

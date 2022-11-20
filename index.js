@@ -13,4 +13,3 @@ console.log('\033[32mmidori.js is now sucessfully packed!'); }, 1000);
 module.exports = {
   Plugins
 };
-

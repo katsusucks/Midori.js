@@ -8,56 +8,66 @@
 
 
 
+
 [Check our docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
 <br>
-[Check our discord server](https://discord.gg/xPURT2B3sA)
-* <strong>New Features</strong>
-* $ver [selfie] [maid] [uniform] [hug]
-* $animal [duck] [duck2]
+[Report a bug](https://discord.gg/xPURT2B3sA)
+<br>
+[Discord server](https://discord.gg/xPURT2B3sA)
+
+
+* New features <br> <br>
+* $ver [kiss] [handhold] [nom] [poke] [glomp] [waifu] [shinobu] [oppai] <br>
+* $nsfw (function in docs) (i was forced to add) <br>
+* Command handler (by using fs) <br>
+* Aoi.js v6 support <br>
+* Minor changes <br>
+
+
+
 ---
 
 
 
+Install
 
 
-
-
-
-> Install
-> <br>
-> `npm i midori.js`
+```js
+npm i midori.js
+```
 
 ---
 * Setup
 
 ```js
-const aoijs = require("aoi.js"); //Adds the aoi.js package
+const { AoiClient } = require("aoi.js");
 
-const bot = new aoijs.Bot({
-token: "DISCORD_BOT_TOKEN", //Discord Bot Token
-prefix: "DISCORD_BOT_PREFIX", //Discord Bot Prefix
-intents: ["GUILDS","GUILD_MESSAGES"] //Discord Bot Intents
-});
+const bot = new AoiClient({
+    token: "DISCORD_BOT_TOKEN",
+    intents: ["messageContent", "guilds", "guildMessages"],
+    prefix: "DISCORD_BOT_PREFIX"
+})
 
-const { Plugins } = require("midori.js"); //Adds midori.js package
-const plugins = new Plugins({ bot:bot }); //Sets the plugins
-plugins.loadPlugins(); //Then load them
+
+const { Plugins } = require("midori.js"); 
+const plugins = new Plugins({ bot:bot }); 
+plugins.loadPlugins(); 
+
+
+bot.onMessage()
+
 
 bot.command({
-  name:"neko", //Command Name
-  code:`$neko` //A message or some code
-});
-
-bot.onMessage(); //Listens to messages
+  name : "meme",
+  code : `$meme`
+})
 ```
 
 * Links
 
 [Support Server](https://discord.gg/KTFnKuPSqW)
 <br>
-[Example](https://github.com/xHyperJS/midori.js-example)
-<br>
-[Docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
+[Docs](https://team-hype.gitbook.io/midori.js/starting/setup)
 <br>
 
 * Developers
@@ -65,6 +75,8 @@ bot.onMessage(); //Listens to messages
 <strong>ZeRealOne</strong>
 <br>
 <strong>ItsHyper</strong>
+
+
 
 
 

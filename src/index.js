@@ -1,4 +1,4 @@
-  class Plugins {
+class Plugins {
   constructor(args) {
     this.args = args;
     if (!args.bot) {
@@ -7,32 +7,32 @@
     }
   }
   loadPlugins() {
-    const client = this.args.bot;
-    client.functionManager.createCustomFunction({
-      name: '$say',
-      params: ['authorid', 'message'],
-      type: 'aoi.js',
-      code: ` 
-**$userTag[{authorid}]** says: **{message}**
-`
+    const bot = this.args.bot;
 
 
-    })
+   bot.functionManager.createFunction({
+    name : '$leref', //FUNCTION NAME
+    params : ["return"],//THE TYPE OF PARAMS
+    type : 'aoi.js', //TYPE METHOD
+    code : ` 
+{title:hello}`
+});
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
       name: '$i',
       type: 'djs',
       code: async d => {
-        const aoiData = d.util.aoiFunc(d);
+        const data = d.util.aoiFunc(d);
           //nothing here, it's comment
         return {
-          code: d.util.setCode(aoiData)
+          code: d.util.setCode(data)
         }
       }
     });
+
     
     
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
       name: "$neko",
       type: "djs",
       code: async d => {
@@ -51,7 +51,7 @@
     });
 
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
       name: "$meme",
       type: "djs",
       code: async d => {
@@ -71,27 +71,27 @@
 
 
 
-    client.functionManager.createCustomFunction({
-      name: "$varExists", //The $varExists function
-      type: "djs", //Djs
-      code: async d => { //Fetch the data as d
-        const data = d.util.aoiFunc(d); //Get the data as an aoi function
-        const [varName] = data.inside.splits; //Get the single argument that will be called varName
-        var b = await d.client.variableManager.cache.get(varName + '_main'); //Get the variable in the weird type of aoi
-        if (b != undefined) { //If it's not undeifned (so it's exist)
-          data.result = true; //It will return true (not as a string, as a boolean so it can be possible to be used in $if)
+    bot.functionManager.createFunction({
+      name: "$varExists", 
+      type: "djs", 
+      code: async d => { 
+        const data = d.util.aoiFunc(d); 
+        const [varName] = data.inside.splits; 
+        var b = await d.client.variableManager.cache.get(varName + '_main'); 
+        if (b != undefined) { 
+          data.result = true; 
         }
         else {
-          data.result = false; //If it's not exist, will return false
+          data.result = false; 
         }
         return {
-          code: d.util.setCode(data) //Then all of this code will be returned (true \ false)
+          code: d.util.setCode(data) 
         }
       }
     });
 
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$dog",
         type: "djs",
         code: async d => {
@@ -110,7 +110,7 @@
       });
 
     
-      client.functionManager.createCustomFunction({
+      bot.functionManager.createFunction({
         name: "$fact",
         type: "djs",
         code: async d => {
@@ -140,7 +140,7 @@
 
 
 
-client.functionManager.createCustomFunction({
+      bot.functionManager.createFunction({
         name: "$cat",
         type: "djs",
         code: async d => {
@@ -170,7 +170,7 @@ client.functionManager.createCustomFunction({
                                                   
       });
 
-    client.functionManager.createCustomFunction({
+      bot.functionManager.createFunction({
         name: "$panda",
         type: "djs",
         code: async d => {
@@ -199,7 +199,7 @@ client.functionManager.createCustomFunction({
     
     });
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$pikachu",
         type: "djs",
         code: async d => {
@@ -228,7 +228,7 @@ client.functionManager.createCustomFunction({
         }
     });
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$quote",
         type: "djs",
         code: async d => {
@@ -255,7 +255,7 @@ client.functionManager.createCustomFunction({
         }
     });
 
-    client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$hug",
         type: "djs",
         code: async d => {
@@ -283,7 +283,7 @@ client.functionManager.createCustomFunction({
     });
 
     
-client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$pat",
         type: "djs",
         code: async d => {
@@ -311,7 +311,7 @@ client.functionManager.createCustomFunction({
     });
 
         
-client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$ver",
         type: "djs",
         code: async d => {
@@ -352,6 +352,48 @@ client.functionManager.createCustomFunction({
               return data.url;
             });
           }
+          else if(type==="handhold"){
+            data.result = await fetch('https://api.waifu.pics/sfw/handhold')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+          else if(type==="nom"){
+            data.result = await fetch('https://api.waifu.pics/sfw/nom')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+          else if(type==="poke"){
+            data.result = await fetch('https://api.waifu.pics/sfw/poke')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+           else if(type==="glomp"){
+            data.result = await fetch('https://api.waifu.pics/sfw/glomp')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+          else if(type==="shinobu"){
+            data.result = await fetch('https://api.waifu.pics/sfw/shinobu')
+            .then(res => res.json())
+              .then(data => {
+              return data.url;
+            });
+          }
+          else if(type==="oppai"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=oppai')
+            .then(res => res.json())
+              .then(data => {
+              return data.images[0].url;
+            });
+          }
          
           return {
             code: d.util.setCode(data)
@@ -362,7 +404,7 @@ client.functionManager.createCustomFunction({
     });
 
     
-client.functionManager.createCustomFunction({
+    bot.functionManager.createFunction({
         name: "$animal",
         type: "djs",
         code: async d => {
@@ -384,15 +426,60 @@ client.functionManager.createCustomFunction({
           }
           return {
             code: d.util.setCode(data)
+          
 
 
           
-}
+          }
+        }
+});
+
+
+
+    
+ 
+
+  
+
+
+
+
+bot.functionManager.createFunction({
+        name: "$nsfw",
+        type: "djs",
+        code: async d => {
+          const data = d.util.aoiFunc(d);
+          const [type] = data.inside.splits;
+          const fetch = require("node-fetch");
+          if(type==="ass"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=ass')
+            .then(res => res.json())
+            .then(data => {
+              return data.images[0].url;
+            });
+          } else if(type==="hentai"){
+            data.result = await fetch('https://api.waifu.im/random/?selected_tags=hentai')
+            .then(res => res.json())
+            .then(data => {
+              return data.images[0].url;
+            });
+          }
+          return {
+            code: d.util.setCode(data)
+          
+
+
+          
+          }
+        }
+});
+
+  
+
+
+  }
 }
 
-           });
-  }
-  }
 
 
 

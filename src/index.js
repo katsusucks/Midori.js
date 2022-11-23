@@ -9,15 +9,6 @@ class Plugins {
   loadPlugins() {
     const bot = this.args.bot;
 
-
-   bot.functionManager.createFunction({
-    name : '$leref', //FUNCTION NAME
-    params : ["return"],//THE TYPE OF PARAMS
-    type : 'aoi.js', //TYPE METHOD
-    code : ` 
-{title:hello}`
-});
-
     bot.functionManager.createFunction({
       name: '$i',
       type: 'djs',

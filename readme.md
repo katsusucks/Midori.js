@@ -9,23 +9,15 @@
 
 
 
-[Check our docs](https://team-hype.gitbook.io/untitled-1/starting/setup)
+[Check our docs](https://docs.midorijs.tk)
 <br>
 [Report a bug](https://discord.gg/xPURT2B3sA)
 <br>
 [Discord server](https://discord.gg/xPURT2B3sA)
 
 
-* New features <br> <br>
-* $ver [kiss] [handhold] [nom] [poke] [glomp] [waifu] [shinobu] [oppai] <br>
-* $nsfw (function in docs) (i was forced to add) <br>
-* Command handler (by using fs) <br>
-* Aoi.js v6 support <br>
-* Minor changes <br>
-
-
-
----
+* <strong>New Features</strong>
+* Supports aoi.js 6.0.3
 
 
 
@@ -33,7 +25,7 @@ Install
 
 
 ```js
-npm i midori.js
+npm i midori.js@v4.0.1
 ```
 
 ---
@@ -42,10 +34,10 @@ npm i midori.js
 ```js
 const { AoiClient } = require("aoi.js");
 
-const bot = new AoiClient({
-    token: "DISCORD_BOT_TOKEN",
-    intents: ["messageContent", "guilds", "guildMessages"],
-    prefix: "DISCORD_BOT_PREFIX"
+const bot = new aoijs.AoiClient({
+token: "Discord Bot Token",
+prefix: "Discord Bot Prefix",
+intents: ["MessageContent", "Guilds", "GuildMessages"]
 })
 
 

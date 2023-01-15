@@ -25,7 +25,7 @@ Install
 
 
 ```js
-npm i midori.js@v4.0.1
+npm i midori.js
 ```
 
 ---

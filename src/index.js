@@ -10,6 +10,176 @@ class Plugins {
     const bot = this.args.bot;
 
     bot.functionManager.createFunction({
+      name: '$request',
+      params: [""],
+      type: 'aoi.js',
+      code: `$httpRequest[$message[1];$message[2];;$message[3];Failed to request!]`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$showType',
+      params: [""],
+      type: 'aoi.js',
+      code: `$botTyping`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$serverID',
+      params: [""],
+      type: 'aoi.js',
+      code: `$guildID`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$userID',
+      params: [""],
+      type: 'aoi.js',
+      code: `$authorID`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$pingAuthorID',
+      params: [""],
+      type: 'aoi.js',
+      code: `<@$authorID>`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$ownerID',
+      params: [""],
+      type: 'aoi.js',
+      code: `$botOwnerID`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$ownerTag',
+      params: [""],
+      type: 'aoi.js',
+      code: `<@$botOwnerID>`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$purge',
+      params: [""],
+      type: 'aoi.js',
+      code: `$clear[$message[1]]`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$cpuUsage',
+      params: [""],
+      type: 'aoi.js',
+      code: `$cpu`
+    });
+
+
+
+
+  bot.functionManager.createFunction({
+     name: '$allCommands',
+       type: 'aoi.js',
+       params: [""],
+      code: `$commandsCount`
+ });
+
+    bot.functionManager.createFunction({
+      name: '$botToken',
+      params: [""],
+      type: 'aoi.js',
+      code: `$clientToken`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$botID',
+      params: [""],
+      type: 'aoi.js',
+      code: `$clientID`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$returnTime',
+      params: [""],
+      type: 'aoi.js',
+      code: `$executionTime`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$cacheUsers',
+      params: [""],
+      type: 'aoi.js',
+      code: `$cacheMembers`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$usage',
+      params: [""],
+      type: 'aoi.js',
+      code: `$ram`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$pack',
+      params: [""],
+      type: 'aoi.js',
+      code: `Midori.js is already packed with $ping`
+    });
+
+
+    bot.functionManager.createFunction({
+      name: '$botInvite',
+      params: [""],
+      type: 'aoi.js',
+      code: `$getBotInvite`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$version',
+      params: [""],
+      type: 'aoi.js',
+      code: `v5.0.0`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$onlyServers',
+      params: [""],
+      type: 'aoi.js',
+      code: `$onlyIf[$guildID!=;]`
+    });
+
+    bot.functionManager.createFunction({
+      name: '$banUsers',
+      params: [""],
+      type: 'aoi.js',
+      code: `$banCount[$guildID]`
+    });
+    
+
+
+
+
+  
+
+
+   
+
+
+
+
+
+
+   
+    //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //D.JS
+
+     bot.functionManager.createFunction({
       name: '$i',
       type: 'djs',
       code: async d => {
@@ -21,7 +191,6 @@ class Plugins {
       }
     });
 
-    
     
     bot.functionManager.createFunction({
       name: "$neko",

@@ -17,7 +17,8 @@
 
 
 * <strong>New Features</strong>
-* Supports aoi.js 6.0.3
+* Supports aoi.js 6.2.6
+* Fixed all bugs
 
 
 
@@ -25,34 +26,44 @@ Install
 
 
 ```js
-npm i midori.js
+npm i midori.js@v4.1.9
 ```
 
 ---
 * Setup
 
 ```js
-const { AoiClient } = require("aoi.js");
+const {AoiClient} = require("aoi.js");
 
-const bot = new aoijs.AoiClient({
-token: "Discord Bot Token",
-prefix: "Discord Bot Prefix",
-intents: ["MessageContent", "Guilds", "GuildMessages"]
+const bot = new AoiClient({
+token: "BOT_TOKEN",
+prefix: "PREFIX",
+intents: ["MessageContent", "Guilds", "GuildMessages"],
+  events: [
+      "onMessage",
+      "onInteractionCreate"
+    ]
 })
 
 
-const { Plugins } = require("midori.js"); 
-const plugins = new Plugins({ bot:bot }); 
-plugins.loadPlugins(); 
 
-
-bot.onMessage()
+const { Plugins } = require("midori.js"); //Adds midori.js package
+const plugins = new Plugins({ bot:bot }); //Sets the plugins
+plugins.loadPlugins(); //Then load them
 
 
 bot.command({
   name : "meme",
   code : `$meme`
 })
+
+
+
+
+
+  
+
+
 ```
 
 * Links

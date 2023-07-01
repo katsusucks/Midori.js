@@ -192,6 +192,9 @@ class Plugins {
     });
 
     
+
+
+    
     bot.functionManager.createFunction({
       name: "$neko",
       type: "djs",
@@ -217,7 +220,7 @@ class Plugins {
       code: async d => {
         const data = d.util.aoiFunc(d);
         const fetch = require("node-fetch")
-        const URL = await fetch('https://meme-api.herokuapp.com/gimme')
+        const URL = await fetch('https://meme-api.com/gimme')
           .then(res => res.json())
           .then(data => {
             return data.url;

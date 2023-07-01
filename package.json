@@ -1,7 +1,7 @@
 {
   "name": "midori.js",
-  "version": "4.0.0",
-  "description": "midori.js is the most powerful string package to create a discord bot with custom features having aoi.js features!",
+  "version": "4.1.9",
+  "description": "Midori.js provides users with ready-made features that are simple to utilize.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,12 +14,9 @@
     "discord.js",
     "aoi.js",
     "discord-bot",
-    "discord.ts",
     "node.js",
     "api",
     "discord",
-    "meme",
-    "neko",
     "image",
     "Image Manipulation",
     "@types/node"
@@ -29,7 +26,7 @@
   "homepage": "https://github.com/xHyperJS/midori.js",
   "dependencies": {
     "@types/node": "^18.0.6",
-    "aoi.js": "^6.0.0",
+    "aoi.js": "^6.2.6",
     "node-fetch": "^2.0.0"
   }
 }
